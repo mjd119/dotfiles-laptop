@@ -70,7 +70,6 @@ DISABLE_AUTO_UPDATE="true"
 # Add wisely, as too many plugins slow down shell startup.
 # Plugins from ZSH_CUSTOM (/usr/share/zsh/) and ZSH
 plugins=(
-  git
   zsh-syntax-highlighting
   zsh-autosuggestions
 )

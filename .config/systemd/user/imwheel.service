@@ -1,4 +1,5 @@
 # Service file from Arch Wiki (mjd119 added -b 45 argument to enable front/back buttons)
+# Restart on failure line added from https://bbs.archlinux.org/viewtopic.php?id=250540
 [Unit]
 Description=IMWheel
 Wants=display-manager.service
@@ -10,6 +11,6 @@ Environment=XAUTHORITY=%h/.Xauthority
 ExecStart=/usr/bin/imwheel -d -b 45
 ExecStop=/usr/bin/pkill imwheel
 RemainAfterExit=yes
-
+Restart=on-failure
 [Install]
 WantedBy=graphical.target
