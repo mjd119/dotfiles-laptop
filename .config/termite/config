@@ -39,13 +39,11 @@ search_wrap = true
 
 # "off", "left" or "right"
 #scrollbar = off
-
 [colors]
 
 # https://git.io/nord
 foreground=#d8dee9
-#background=#2e3440
-background = rgba(63, 63, 63, 0.9)
+background=#2e3440
 cursor=#d8dee9
 
 color0=#3b4252

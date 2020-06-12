@@ -124,6 +124,3 @@ export PAGER="most"
 #}
 # Show auto-completion list automatically, without double tab (https://gist.github.com/zachbrowne/8bc414c9f30192067831fafebd14255c#file-the-ultimate-bad-ass-bashrc-file-L48)
 #if [[ $iatest > 0 ]]; then bind "set show-all-if-ambiguous On"; fi
-# Color is on for grep (https://www.cyberciti.biz/tips/bash-aliases-mac-centos-linux-unix.html)
-
-alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME"
