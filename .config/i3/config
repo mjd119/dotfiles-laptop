@@ -225,5 +225,5 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 # Start flameshot screenshot saver
 exec_always --no-startup-id flameshot
 # Start udiskie
-exec_always --no-startup-id udiskie
+#exec_always --no-startup-id udiskie -N
 # mjd119 end ##

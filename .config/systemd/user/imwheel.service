@@ -12,5 +12,6 @@ ExecStart=/usr/bin/imwheel -d -b 45
 ExecStop=/usr/bin/pkill imwheel
 RemainAfterExit=yes
 Restart=on-failure
+# Should this be default.target instead?
 [Install]
 WantedBy=graphical.target
