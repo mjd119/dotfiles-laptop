@@ -39,6 +39,7 @@ search_wrap = true
 
 # "off", "left" or "right"
 #scrollbar = off
+
 [colors]
 
 # https://git.io/nord

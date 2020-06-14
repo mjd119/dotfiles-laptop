@@ -119,11 +119,13 @@ log.open_file = "log", (cfg.logfile)
 log.add_output = "info", "log"
 #log.add_output = "tracker_debug", "log"
 
-# Added by mjd119 for rutorrent
-#scgi_local = /home/matt/rpc.socket
-#scgi_port = localhost:5000
-method.insert = pyro.extended, value|const, 1
+# Added by mjd119 for rutorrent (Currently doesn't work)
 scgi_local = /home/matt/rpc.socket
 execute.nothrow = chmod,770,/home/matt/rpc.socket
 #scgi_port = localhost:5000
+#network.scgi.open_port = 127.0.0.1:5000
+
+# Added to enable pyroscope commands
+method.insert = pyro.extended, value|const, 1
+
 ### END of rtorrent.rc ###
