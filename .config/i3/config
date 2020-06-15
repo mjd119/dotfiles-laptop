@@ -103,6 +103,9 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
+# Flameshot shortcut (added by mjd119)
+bindsym Print exec flameshot gui # Partial Screenshot (drag to crop)
+bindsym Shift+Print exec flameshot full --path ~/Pictures # Full screenshot
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 "1"
@@ -210,20 +213,20 @@ for_window [window_type="dialog"] floating enable
 for_window [window_type="menu"] floating enable
 
 ## Gap Rules ##
-gaps inner 5
-gaps outer 5
+gaps inner 20
+gaps outer 0
 #Prevent plasma notifications from stealing focus
 no_focus [class=”plasmashell”]
 # Remove borders
 for_window [class=".*"] border pixel 0
 # Start night light
-exec_always --no-startup-id redshift-gtk
+#exec_always --no-startup-id redshift-gtk
 # Start polybar (Arch Wiki)
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 # Start compositor (Arch Wiki)
-#exec_always --no-startup-id picom -b --experimental-backends
+exec_always --no-startup-id picom -b --experimental-backends
 # Start flameshot screenshot saver
-exec_always --no-startup-id flameshot
+#exec_always --no-startup-id flameshot
 # Start udiskie
-#exec_always --no-startup-id udiskie -N
+exec_always --no-startup-id udiskie -t
 # mjd119 end ##
