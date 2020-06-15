@@ -147,6 +147,9 @@ set wrap
 " Avoid wrapping words
 set linebreak
 " Enable spellchecking
-set spell
+"set spell
 " Highlight search terms
 set hlsearch
+" Added by mjd119 to to prevent conflict between python versions (Arch Wiki)
+let g:powerline_pycmd="py3"
+:set laststatus=2

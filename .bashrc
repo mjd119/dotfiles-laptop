@@ -115,7 +115,7 @@ fi
 # Show neofetch output on every terminal instance
 #neofetch
 # Show pfetch output on every terminal instance
-pfetch
+#pfetch
 # Colored manpages (https://www.tecmint.com/view-colored-man-pages-in-linux/)
 export PAGER="most"
 # List files and directories after changing directory (https://www.reddit.com/r/linux/comments/7oc5mt/what_are_some_useful_things_you_put_on_your/)
