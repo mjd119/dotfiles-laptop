@@ -46,7 +46,9 @@ bindsym $mod+Return exec termite
 # kill focused window
 bindsym $mod+Shift+q kill
 
-# start dmenu (a program launcher)
+# Open chromium
+bindsym $mod+Control+c exec chromium
+# start dmenu (a program launcher) (replaced by mjd119 to use rofi instead)
 bindsym $mod+d exec rofi -show run
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
@@ -220,13 +222,12 @@ no_focus [class=”plasmashell”]
 # Remove borders
 for_window [class=".*"] border pixel 0
 # Start night light
-#exec_always --no-startup-id redshift-gtk
 # Start polybar (Arch Wiki)
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 # Start compositor (Arch Wiki)
 exec_always --no-startup-id picom -b --experimental-backends
 # Start flameshot screenshot saver
 #exec_always --no-startup-id flameshot
-# Start udiskie
-exec_always --no-startup-id udiskie -t
+# Start udiskie (launch script similar to polybar script to kill current instances)
+exec_always --no-startup-id $HOME/.config/udiskie/launch.sh
 # mjd119 end ##
