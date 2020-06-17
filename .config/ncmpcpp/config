@@ -41,13 +41,6 @@ mpd_music_dir = ~/Music
 ## visualization or 44100:16:2 for stereo visualization. Example configuration
 ## (it has to be put into mpd.conf):
 ##
-audio_output {
-        type            "fifo"
-        name            "Visualizer feed"
-        path            "/tmp/mpd.fifo"
-        format          "44100:16:2"
-}
-
 visualizer_fifo_path = /tmp/mpd.fifo
 #
 ##
@@ -541,5 +534,5 @@ visualizer_color = blue, cyan, green, yellow, magenta, red
 #
 #active_window_border = red
 #
-# Notification on song change
-execute_on_song_change = notify-send "Now Playing" "$(mpc --format '%title% \n%artist% - %album%' current)"
+# Notification on song change (mjd119 commented out to prevent freezing in i3 standalone)
+#execute_on_song_change = notify-send "Now Playing" "$(mpc --format '%title% \n%artist% - %album%' current)"
