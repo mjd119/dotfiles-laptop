@@ -10,8 +10,8 @@ Type=simple
 Environment=XAUTHORITY=%h/.Xauthority
 ExecStart=/usr/bin/imwheel -d -b 45 
 ExecStop=/usr/bin/pkill imwheel
-RemainAfterExit=no
+RemainAfterExit=yes
 Restart=on-failure
 # Should this be default.target instead?
 [Install]
-WantedBy=graphical.target
+WantedBy=default.target
