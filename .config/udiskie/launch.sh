@@ -4,5 +4,5 @@
 # Terminate already running udiskie instances
 killall -q udiskie 
 # Start udiskie (with system tray icon)
-udiskie -t &
+udiskie --tray --automount &
 echo "Udiskie launched..."
