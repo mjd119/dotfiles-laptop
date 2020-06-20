@@ -152,4 +152,5 @@ set linebreak
 set hlsearch
 " Added by mjd119 to to prevent conflict between python versions (Arch Wiki)
 let g:powerline_pycmd="py3"
+" Always show powerline (mjd119) [Arch Wiki]
 :set laststatus=2
