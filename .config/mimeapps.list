@@ -1,0 +1,14 @@
+[Added Associations]
+text/html=chromium.desktop;elinks.desktop;libreoffice-writer.desktop;okularApplication_txt.desktop;atom.desktop;vim.desktop;gvim.desktop;
+
+[Default Applications]
+text/html=chromium.desktop
+x-scheme-handler/http=chromium.desktop
+x-scheme-handler/https=chromium.desktop
+x-scheme-handler/mailto=chromium.desktop
+x-scheme-handler/about=chromium.desktop
+x-scheme-handler/unknown=chromium.desktop
+inode/directory=org.kde.dolphin.desktop;
+application/pdf=qpdfview.desktop;
+image/jpeg=org.kde.gwenview.desktop;
+image/png=org.kde.gwenview.desktop;
