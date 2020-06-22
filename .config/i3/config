@@ -17,7 +17,7 @@ set $mod Mod1
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango:Source Code Pro Medium 10
+font pango:Source Code Pro Medium 8
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
@@ -50,6 +50,8 @@ bindsym $mod+Shift+q kill
 bindsym $mod+Control+c exec chromium
 # start dmenu (a program launcher) (replaced by mjd119 to use rofi instead)
 bindsym $mod+d exec rofi -show run
+# Added by mjd119 to use betterlockscreen to lock instead of regular i3lock
+bindsym $mod+shift+x exec betterlockscreen -l dim
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -181,9 +183,11 @@ bindsym $mod+r mode "resize"
 # Commented out by mjd119 for KDE Plamsa Desktop
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-#bar {
-#        status_command i3status
-#}
+bar {
+	position top
+	# Commented out by mjd119 to only show system tray and workspaces
+        #status_command i3status
+}
 
 ## Added by mjd119 from https://medium.com/@vishnu_mad/using-i3-window-manager-with-kde-plasma-c2ac70594d8 ##
 # >>> Plasma Integration <<<
@@ -220,14 +224,29 @@ gaps outer 0
 #Prevent plasma notifications from stealing focus
 no_focus [class=”plasmashell”]
 # Remove borders
-for_window [class=".*"] border pixel 0
+for_window [class=".*"] border pixel 2
 # Start night light
 # Start polybar (Arch Wiki)
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 # Start compositor (Arch Wiki)
 exec_always --no-startup-id picom -b --experimental-backends
+#exec_always --no-startup-id picom -b 
 # Start flameshot screenshot saver
 #exec_always --no-startup-id flameshot
 # Start udiskie (launch script similar to polybar script to kill current instances)
 exec_always --no-startup-id $HOME/.config/udiskie/launch.sh
+# Added by mjd119 for betterlockscreen (https://github.com/pavanjadhaw/betterlockscreen)
+# set desktop background with custom effect
+exec --no-startup-id betterlockscreen -w dim
+# Alternative (set last used background)
+exec --no-startup-id source ~/.fehbg
+# From https://erikdubois.be/i3-gaps-settings-colouring-i3/
+# class                 border  backgr. text    indicator child_border
+client.focused          #4c7899 #285577 #ffffff #2e9ef4   #285577
+client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
+client.unfocused        #333333 #222222 #888888 #292d2e   #222222
+client.urgent           #2f343a #900000 #ffffff #900000   #900000
+client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+
+client.background       #ffffff
 # mjd119 end ##
