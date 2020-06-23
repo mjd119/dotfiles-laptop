@@ -7,7 +7,7 @@
 [ -f ~/.xprofile ] && . ~/.xprofile
 # Added by mjd119 to set desktop background on startup for betterlockscreen (betterlockscreen)
 # set desktop background with custom effect
-betterlockscreen -w dim
+#betterlockscreen -w dim
 # Alternative (set last used background)
 source ~/.fehbg
 exec i3

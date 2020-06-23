@@ -5,6 +5,7 @@
     ]
     telemetryConsent: "no"
   editor:
+    fontSize: 12
     softWrap: true
   "exception-reporting":
     userId: "35b77153-b8c4-4f87-bfe5-f471d833dfad"
