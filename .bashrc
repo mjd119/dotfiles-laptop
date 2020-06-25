@@ -110,12 +110,10 @@ source $OSH/oh-my-bash.sh
 if [ -e $HOME/.bash_aliases ]; then
     source $HOME/.bash_aliases
 fi
-# Show terminal colors
-#~/./.colors.sh
-# Show neofetch output on every terminal instance
-#neofetch
-# Show pfetch output on every terminal instance
-#pfetch
+# Print color panes from shell-color-scripts on every terminal instance
+colorscript exec panes
+# Show pfetch output on every terminal instance 
+pfetch
 # Colored manpages (https://www.tecmint.com/view-colored-man-pages-in-linux/)
 export PAGER="most"
 # List files and directories after changing directory (https://www.reddit.com/r/linux/comments/7oc5mt/what_are_some_useful_things_you_put_on_your/)
