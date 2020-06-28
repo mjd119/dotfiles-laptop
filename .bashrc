@@ -95,10 +95,6 @@ plugins=(
 # plugins, and themes. Aliases can be placed here, though oh-my-bash
 # users are encouraged to define aliases within the OSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias bashconfig="mate ~/.bashrc"
-# alias ohmybash="mate ~/.oh-my-bash"
 
 BASH_CACHE_DIR=$HOME/.cache/oh-my-bash
 if [[ ! -d $BASH_CACHE_DIR ]]; then
@@ -116,9 +112,3 @@ colorscript exec panes
 pfetch
 # Colored manpages (https://www.tecmint.com/view-colored-man-pages-in-linux/)
 export PAGER="most"
-# List files and directories after changing directory (https://www.reddit.com/r/linux/comments/7oc5mt/what_are_some_useful_things_you_put_on_your/)
-#cd() {
-#    builtin cd "$@" && ls
-#}
-# Show auto-completion list automatically, without double tab (https://gist.github.com/zachbrowne/8bc414c9f30192067831fafebd14255c#file-the-ultimate-bad-ass-bashrc-file-L48)
-#if [[ $iatest > 0 ]]; then bind "set show-all-if-ambiguous On"; fi

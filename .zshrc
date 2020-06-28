@@ -94,10 +94,6 @@ plugins=(
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 
 ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh
 if [[ ! -d $ZSH_CACHE_DIR ]]; then
@@ -111,10 +107,8 @@ source $ZSH/oh-my-zsh.sh
 if [ -e $HOME/.zsh_aliases ]; then
     source $HOME/.zsh_aliases
 fi
-# Show terminal colors
-#~/./.colors.sh
-# Show neofetch output on every terminal instance
-#neofetch
+# Print color panes from shell-color-scripts on every terminal instance
+colorscript exec panes
 # Show pfetch output on every terminal instance
 pfetch
 # Colored manpages (https://www.tecmint.com/view-colored-man-pages-in-linux/)

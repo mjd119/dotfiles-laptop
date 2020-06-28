@@ -49,7 +49,7 @@ bindsym $mod+Shift+q kill
 # Open chromium
 bindsym $mod+Control+c exec chromium
 # start dmenu (a program launcher) (replaced by mjd119 to use rofi instead)
-bindsym $mod+d exec rofi -show run
+bindsym $mod+d exec rofi -show drun -show-icons -icon-theme Flat-Remix-Blue
 # Added by mjd119 to use betterlockscreen to lock instead of regular i3lock
 bindsym $mod+shift+x exec betterlockscreen -l dim
 # There also is the (new) i3-dmenu-desktop which only displays applications
@@ -225,6 +225,45 @@ gaps outer 0
 no_focus [class=”plasmashell”]
 # Remove borders
 for_window [class=".*"] border pixel 3
+
+# Change gaps during runtime (i3) https://libraries.io/github/Airblader/i3
+set $mode_gaps Gaps: (o) outer, (i) inner
+set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
+set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
+bindsym $mod+Shift+g mode "$mode_gaps"
+
+mode "$mode_gaps" {
+        bindsym o      mode "$mode_gaps_outer"
+        bindsym i      mode "$mode_gaps_inner"
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+mode "$mode_gaps_inner" {
+        bindsym plus  gaps inner current plus 5
+        bindsym minus gaps inner current minus 5
+        bindsym 0     gaps inner current set 0
+
+        bindsym Shift+plus  gaps inner all plus 5
+        bindsym Shift+minus gaps inner all minus 5
+        bindsym Shift+0     gaps inner all set 0
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+mode "$mode_gaps_outer" {
+        bindsym plus  gaps outer current plus 5
+        bindsym minus gaps outer current minus 5
+        bindsym 0     gaps outer current set 0
+
+        bindsym Shift+plus  gaps outer all plus 5
+        bindsym Shift+minus gaps outer all minus 5
+        bindsym Shift+0     gaps outer all set 0
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+# Change gaps during runtime END
 # Start night light
 # Start polybar (Arch Wiki)
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
@@ -247,6 +286,10 @@ client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
 client.unfocused        #333333 #222222 #888888 #292d2e   #222222
 client.urgent           #2f343a #900000 #ffffff #900000   #900000
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
-
 client.background       #ffffff
+# Open termite instance on startup on workspace 1
+exec --no-startup-id  i3-msg "workspace 1; exec termite"
+# Open ncmpcpp (music player) on startup, switch back to workspace 1
+exec --no-startup-id i3-msg "workspace 2; exec termite --exec=ncmpcpp --hold; workspace 1"
 # mjd119 end ##
+
