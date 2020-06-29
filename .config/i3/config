@@ -290,6 +290,6 @@ client.background       #ffffff
 # Open termite instance on startup on workspace 1
 exec --no-startup-id  i3-msg "workspace 1; exec termite"
 # Open ncmpcpp (music player) on startup, switch back to workspace 1
-exec --no-startup-id i3-msg "workspace 2; exec termite --exec=ncmpcpp --hold; workspace 1"
+exec --no-startup-id i3-msg "workspace 2; exec termite --exec=ncmpcpp; workspace 1"
 # mjd119 end ##
 
