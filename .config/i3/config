@@ -108,8 +108,10 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # Flameshot shortcut (added by mjd119)
-bindsym Print exec flameshot gui # Partial Screenshot (drag to crop)
-bindsym Shift+Print exec flameshot full --path ~/Pictures # Full screenshot
+# Partial Screenshot (drag to crop)
+bindsym Print exec "flameshot gui" 
+# Full screenshot
+bindsym Shift+Print exec flameshot full --path ~/Pictures 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 "1"
@@ -271,7 +273,7 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id picom -b --experimental-backends
 #exec_always --no-startup-id picom -b 
 # Start flameshot screenshot saver
-#exec_always --no-startup-id flameshot
+exec_always --no-startup-id flameshot
 # Start udiskie (launch script similar to polybar script to kill current instances)
 exec_always --no-startup-id $HOME/.config/udiskie/launch.sh
 # Added by mjd119 for betterlockscreen (https://github.com/pavanjadhaw/betterlockscreen)
