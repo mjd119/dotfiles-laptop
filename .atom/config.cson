@@ -2,7 +2,6 @@
   core:
     disabledPackages: [
       "remote-ftp"
-      "vim-mode-plus"
     ]
     telemetryConsent: "no"
   editor:
