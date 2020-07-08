@@ -8,6 +8,6 @@
 # Added by mjd119 to set desktop background on startup for betterlockscreen (betterlockscreen)
 # set desktop background with custom effect
 #betterlockscreen -w dim
-# Alternative (set last used background)
-source ~/.fehbg
+# Alternative (set last used background) (commented for laptop)
+#source ~/.fehbg
 exec i3

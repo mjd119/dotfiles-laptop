@@ -22,7 +22,7 @@
 #define nord14 #A3BE8C
 #define nord15 #B48EAD
 ! End nord colors (added by mjd119)
-Xft.dpi: 160
+Xft.dpi: 96
 Xft.autohint: 0
 Xft.lcdfilter:  lcddefault
 Xft.hintstyle: hintslight
