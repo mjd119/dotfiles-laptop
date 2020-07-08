@@ -1,8 +1,8 @@
 // Nord theme added by mjd119 from (https://github.com/Murzchnvok/nord-rofi-theme)
-// Bumped up font size by 2
+// mjd119 Bumped up font size by 2 (reverted for laptop)
 configuration {
   show-icons: true;
-  font: "SauceCodePro Nerd Font Medium 12";
+  font: "SauceCodePro Nerd Font Mono 10";
   drun-display-format: "{icon} {name}";
   display-run: " ";
   display-drun: " ";
@@ -56,7 +56,7 @@ inputbar {
 
 prompt {
   enabled: true;
-  font: "SauceCodePro Nerd Font 14";
+  font: "SauceCodePro Nerd Font Mono 12";
   padding: 12 0 0 12;
   text-color: @nord-yellow;
 }
