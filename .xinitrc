@@ -9,5 +9,8 @@
 # set desktop background with custom effect
 #betterlockscreen -w dim
 # Alternative (set last used background)
-source ~/.fehbg
+#source ~/.fehbg
 exec i3
+# Uncomment lines below to start KDE Plasma
+#export DESKTOP_SESSION=plamsa
+#exec startplasma-x11

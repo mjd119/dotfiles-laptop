@@ -9,4 +9,4 @@ alias trim="awk '!/^ *#/ && NF'" #(https://stackoverflow.com/a/17396799)
 alias startfolding="systemctl start foldingathome"
 alias stopfolding="systemctl stop foldingathome"
 alias statusfolding="systemctl status foldingathome"
-
+alias startkde="startx /usr/bin/startplasma-x11"
