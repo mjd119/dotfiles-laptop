@@ -9,4 +9,5 @@ alias trim="awk '!/^ *#/ && NF'" #(https://stackoverflow.com/a/17396799)
 alias startfolding="systemctl start foldingathome"
 alias stopfolding="systemctl stop foldingathome"
 alias statusfolding="systemctl status foldingathome"
-
+alias gulp="i3-swallow"
+alias sgulp="sudo i3-swallow"

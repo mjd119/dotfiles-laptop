@@ -226,7 +226,7 @@ for_window [window_type="menu"] floating enable
 
 ## Gap Rules ##
 # Changed inner to 0 for laptop (mjd119)
-gaps inner 0
+gaps inner 20
 gaps outer 0
 #Prevent plasma notifications from stealing focus
 no_focus [class=”plasmashell”]
@@ -285,9 +285,10 @@ exec_always --no-startup-id $HOME/.config/udiskie/launch.sh
 # set desktop background with custom effect
 #exec --no-startup-id betterlockscreen -w dim
 # Generate wallpaper from installed packages dependencies
-exec --no-startup-id pacwall
+#exec --no-startup-id pacwall
+exec_always --no-startup-id feh --bg-scale '/home/matt/Pictures/wallpapersden.com_synthwave-and-retrowave_1920x1080.jpg'
 # Alternative (set last used background)
-exec --no-startup-id source ~/.fehbg
+#exec --no-startup-id source ~/.fehbg
 # From https://erikdubois.be/i3-gaps-settings-colouring-i3/
 # class                 border  backgr. text    indicator child_border
 client.focused          #4c7899 #285577 #ffffff #2e9ef4   #285577
