@@ -51,6 +51,7 @@ bindsym $mod+Control+c exec chromium
 # start dmenu (a program launcher) (replaced by mjd119 to use rofi instead)
 bindsym $mod+d exec rofi -show drun -show-icons -icon-theme Flat-Remix-Blue
 bindsym $mod+shift+d exec rofi -show window -show-icons -icon-theme Flat-Remix-Blue
+bindsym $mod+Control+d exec rofi -show run -show-icons -icon-theme Flat-Remix-Blue
 # Added by mjd119 to use betterlockscreen to lock instead of regular i3lock
 bindsym $mod+shift+x exec betterlockscreen -l dim
 # There also is the (new) i3-dmenu-desktop which only displays applications
@@ -165,10 +166,10 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
+        bindsym h resize shrink width 10 px or 10 ppt
+        bindsym j resize grow height 10 px or 10 ppt
+        bindsym k resize shrink height 10 px or 10 ppt
+        bindsym l resize grow width 10 px or 10 ppt
 
         # same bindings, but for the arrow keys
         bindsym Left resize shrink width 10 px or 10 ppt
@@ -228,7 +229,8 @@ gaps outer 0
 no_focus [class=”plasmashell”]
 # Remove borders
 for_window [class=".*"] border pixel 3
-
+# Only show border when there is more than one visible window on a workspace
+hide_edge_borders smart
 # Change gaps during runtime (i3) https://libraries.io/github/Airblader/i3
 set $mode_gaps Gaps: (o) outer, (i) inner
 set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
