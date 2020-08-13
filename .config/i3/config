@@ -8,8 +8,10 @@
 # i3 config file (v4)
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
-
+# Alt-key is the mod key (Regular Desktop Mode)
 set $mod Mod1
+# Right Windows Key is the mod key (Game Mode)
+#set $mod Mod3
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -46,8 +48,14 @@ bindsym $mod+Return exec termite
 # kill focused window
 bindsym $mod+Shift+q kill
 
-# Open chromium
-bindsym $mod+Control+c exec chromium
+# Open vivaldi web browser
+bindsym $mod+Control+c exec vivaldi-stable
+# Open file manager (thunar)
+bindsym $mod+Control+e exec thunar
+# Pause/play mpd
+bindsym $mod+Shift+p exec mpc toggle
+# Open emacs
+bindsym $mod+Control+m exec emacs
 # start dmenu (a program launcher) (replaced by mjd119 to use rofi instead)
 bindsym $mod+d exec rofi -show drun -show-icons -icon-theme Flat-Remix-Blue
 bindsym $mod+shift+d exec rofi -show window -show-icons -icon-theme Flat-Remix-Blue
@@ -223,7 +231,7 @@ for_window [window_type="dialog"] floating enable
 for_window [window_type="menu"] floating enable
 
 ## Gap Rules ##
-gaps inner 20
+gaps inner 10
 gaps outer 0
 #Prevent plasma notifications from stealing focus
 no_focus [class=”plasmashell”]
