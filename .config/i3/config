@@ -210,7 +210,7 @@ exec --no-startup-id wmctrl -c Plasma
 for_window [title="Desktop — Plasma"] kill; floating enable; border none
 
 # Restore wallpaper (mjd119 added)
-exec --no-startup-id feh --bg-scale '/home/matt/Pictures/mountains_winter_snow_118389_3840x2160.jpg'
+exec ~/.fehbg
 # Avoid tiling popups, dropdown windows from plasma
 for_window [class="plasmashell"] floating enable
 for_window [class="Plasma"] floating enable

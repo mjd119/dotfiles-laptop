@@ -1,9 +1,13 @@
 [Added Associations]
 text/html=chromium.desktop;elinks.desktop;libreoffice-writer.desktop;okularApplication_txt.desktop;atom.desktop;vim.desktop;gvim.desktop;
 text/x-python=atom.desktop;libreoffice-writer.desktop;okularApplication_txt.desktop;gvim.desktop;emacs.desktop;vim.desktop;
-text/plain=gvim.desktop;vim.desktop;
+text/plain=gvim.desktop;emacs.desktop;vim.desktop;
 application/zip=xarchiver.desktop;
 application/octet-stream=gvim.desktop;
+application/x-shellscript=gvim.desktop;emacs.desktop;
+application/x-xz=xarchiver.desktop;
+text/x-csrc=gvim.desktop;vim.desktop;
+application/json=gvim.desktop;
 
 [Default Applications]
 application/pdf=qpdfview.desktop;
