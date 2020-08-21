@@ -4,8 +4,6 @@ text/x-python=atom.desktop;libreoffice-writer.desktop;okularApplication_txt.desk
 
 [Default Applications]
 application/pdf=qpdfview.desktop;
-image/jpeg=org.kde.gwenview.desktop;
-image/png=org.kde.gwenview.desktop;
 text/html=chromium.desktop
 text/x-python=atom.desktop;
 x-scheme-handler/about=chromium.desktop
@@ -14,3 +12,8 @@ x-scheme-handler/https=chromium.desktop
 x-scheme-handler/mailto=chromium.desktop
 x-scheme-handler/unknown=chromium.desktop
 inode/directory=org.kde.dolphin.desktop;
+x-scheme-handler/eclipse+command x-scheme-handler/eclipse+mpc=_usr_lib_eclipse_.desktop
+x-scheme-handler/etcher=balena-etcher-electron.desktop
+image/jpeg=feh.desktop;
+image/png=feh.desktop;
+
