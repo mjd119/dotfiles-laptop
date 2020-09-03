@@ -163,3 +163,5 @@ let g:airline_symbols.space = "\ua0"
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_buffers = 0
 let g:airline_theme = 'onedark'
+" Ignore case when searching (mjd119)
+set ignorecase
