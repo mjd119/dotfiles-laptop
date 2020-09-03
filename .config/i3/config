@@ -60,7 +60,7 @@ bindsym $mod+Control+m exec emacs
 # start dmenu (a program launcher) (replaced by mjd119 to use rofi instead)
 bindsym $mod+d exec rofi -show drun -show-icons -icon-theme Flat-Remix-Blue
 bindsym $mod+shift+d exec rofi -show window -show-icons -icon-theme Flat-Remix-Blue
-bindsym $mod+Control+d exec rofi -show window -show-icons -icon-theme Flat-Remix-Blue
+bindsym $mod+Control+d exec rofi -show run -show-icons -icon-theme Flat-Remix-Blue
 # Added by mjd119 to use betterlockscreen to lock instead of regular i3lock
 bindsym $mod+shift+x exec betterlockscreen -l dim
 # There also is the (new) i3-dmenu-desktop which only displays applications
