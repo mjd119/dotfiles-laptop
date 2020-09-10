@@ -1,0 +1,15 @@
+# Vim-like bindings added by mjd119
+#https://colemannugent.com/blog/vim-keybindings-in-ncmpcpp
+def_key "l"
+  next_column
+def_key "h"
+  previous_column
+def_key "k"
+  scroll_up
+def_key "j"
+  scroll_down
+#https://gist.github.com/Soft/959188/1ffff2f3360b651c74bb9b7b5c6d854ab71b7d08#gistcomment-2754924
+def_key "g"
+  move_home
+def_key "G"
+  move_end
