@@ -1,3 +1,4 @@
+// Theme is from external file (https://github.com/davatorium/rofi-themes)
 configuration {
   show-icons: true;
   font: "SauceCodePro Nerd Font Mono Medium 12";
