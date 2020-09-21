@@ -8,7 +8,7 @@
 # Modified from .ncmpcpp directory from https://gitlab.com/sourplum/dotfiles by mjd119
 MUSIC_DIR="$HOME/Music"
 COVER="/tmp/cover.png"
-
+TEMP_COVER="/tmp/temp_cover.png"
 COVER_SIZE=1000
 
 BORDERS=false
@@ -19,7 +19,13 @@ function ffmpeg_cover {
     if $BORDERS; then
         ffmpeg -loglevel 0 -y -i "$1" -vf "scale=$COVER_SIZE:-1,pad=$COVER_SIZE+$BORDER_WIDTH:ow:(ow-iw)/2:(oh-ih)/2:$BORDER_COLOR" "$COVER"
     else
-        ffmpeg -loglevel 0 -y -i "$1" -vf "scale=$COVER_SIZE:-1" "$COVER"
+        #ffmpeg -loglevel 0 -y -i "$1" -vf "scale=$COVER_SIZE:-1" "$COVER"
+        ffmpeg -loglevel 0 -y -i "$1" -vf "scale=$COVER_SIZE:-1" "$TEMP_COVER"
+        if [ $(stat -c%s $TEMP_COVER) -eq $(stat -c%s $COVER) ]; then # Don't overwrite file if the size is the same so there isn't a flash after changing song on same album and less obvious flash when album does change
+            true
+        else
+            cp $TEMP_COVER $COVER
+        fi
     fi
 }
 
@@ -92,7 +98,7 @@ function find_cover_parent {
 
     # Use placeholder image if an album cover file is not found
     if [ "$album_cover" == "" ]; then
-        album_cover="$HOME/.ncmpcpp/Missing_Art.jpg"
+        album_cover="$HOME/.config/ncmpcpp/Missing_Art.jpg"
     fi
     #echo $album
     #echo $album_cover
