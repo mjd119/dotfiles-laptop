@@ -8,8 +8,10 @@
 # i3 config file (v4)
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
-
+# Alt-key is the mod key (Regular Desktop Mode)
 set $mod Mod1
+# Right Windows key is the mod key (Game Mode)
+#set $mod Mod3
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -237,8 +239,10 @@ gaps inner 20
 gaps outer 0
 #Prevent plasma notifications from stealing focus
 no_focus [class=”plasmashell”]
-# Remove borders
-for_window [class=".*"] border pixel 3
+# Add borders to all windows except for Sxiv and feh
+for_window [class=".*"] border pixel 2
+for_window [class="Sxiv"] border pixel 0
+for_window [class="feh"] border pixel 0
 # Only show border when there is more than one visible window on a workspace
 hide_edge_borders smart
 # Change gaps during runtime (i3) https://libraries.io/github/Airblader/i3
