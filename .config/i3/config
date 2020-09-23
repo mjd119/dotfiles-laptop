@@ -10,7 +10,7 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 # Alt-key is the mod key (Regular Desktop Mode)
 set $mod Mod1
-# Right Windows key is the mod key (Game Mode)
+# Right Windows Key is the mod key (Game Mode)
 #set $mod Mod3
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -19,7 +19,7 @@ set $mod Mod1
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango:Source Code Pro Medium 8
+font pango:SauceCodePro Nerd Font Mono 8
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
@@ -200,8 +200,8 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 #bar {
 #	position top
-	# Commented out by mjd119 to only show system tray and workspaces
-        #status_command i3status
+#	# Commented out by mjd119 to only show system tray and workspaces
+#        status_command i3status
 #}
 
 ## Added by mjd119 from https://medium.com/@vishnu_mad/using-i3-window-manager-with-kde-plasma-c2ac70594d8 ##
@@ -212,7 +212,7 @@ bindsym $mod+r mode "resize"
 exec --no-startup-id wmctrl -c Plasma
 for_window [title="Desktop — Plasma"] kill; floating enable; border none
 
-# Restore wallpaper (mjd119 added) [commented out for laptop]
+# Restore wallpaper (mjd119 added)
 exec ~/.fehbg
 # Avoid tiling popups, dropdown windows from plasma
 for_window [class="plasmashell"] floating enable
@@ -234,7 +234,7 @@ for_window [window_type="dialog"] floating enable
 for_window [window_type="menu"] floating enable
 
 ## Gap Rules ##
-# Changed inner to 0 for laptop (mjd119)
+# Changed inner to 20 for laptop (mjd119)
 gaps inner 20
 gaps outer 0
 #Prevent plasma notifications from stealing focus
@@ -300,7 +300,6 @@ exec --no-startup-id picom -b --experimental-backends
 exec --no-startup-id flameshot
 # Start udiskie (launch script similar to polybar script to kill current instances)
 exec_always --no-startup-id $HOME/.config/udiskie/launch.sh
-exec_always --no-startup-id feh --bg-scale '/home/matt/Pictures/wallpapersden.com_synthwave-and-retrowave_1920x1080.jpg'
 # From https://erikdubois.be/i3-gaps-settings-colouring-i3/
 # class                 border  backgr. text    indicator child_border
 client.focused          #4c7899 #285577 #ffffff #2e9ef4   #285577
@@ -309,9 +308,7 @@ client.unfocused        #333333 #222222 #888888 #292d2e   #222222
 client.urgent           #2f343a #900000 #ffffff #900000   #900000
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 client.background       #ffffff
-# Open termite instance on startup on workspace 1
-#exec --no-startup-id  i3-msg "workspace 1; exec termite"
 # Open ncmpcpp (music player) on startup, switch back to workspace 1
-exec --no-startup-id i3-msg "workspace 2; exec termite --exec=ncmpcpp; workspace 1"
+#exec --no-startup-id i3-msg "workspace 2; exec termite --exec=ncmpcpp; workspace 1"
 # mjd119 end ##
 

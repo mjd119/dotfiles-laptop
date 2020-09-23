@@ -263,6 +263,7 @@ visualizer_color = blue, cyan, green, yellow, magenta, red
 ## notifications etc.
 ##
 #execute_on_song_change = ""
+execute_on_song_change = "~/.config/ncmpcpp/art.sh"
 #
 ##
 ## Note: Custom command that will be executed each time player state
@@ -309,7 +310,8 @@ visualizer_color = blue, cyan, green, yellow, magenta, red
 ## Note: You can specify third character which will be used to build 'empty'
 ## part of progressbar.
 ##
-#progressbar_look = =>
+## From http://dotshare.it/dots/8402/ (added by mjd119)
+progressbar_look = "━━━"
 #
 ## Available values: database, playlist.
 ##
