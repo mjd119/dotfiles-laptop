@@ -165,7 +165,6 @@
 #def_key "shift-down"
 #  select_item
 #  scroll_down
-#
 #def_key "["
 #  scroll_up_album
 #
@@ -564,3 +563,10 @@ def_key "g"
   move_home
 def_key "G"
   move_end
+# Vim keybinding for selecting multiple tracks (added by mjd119)
+def_key "J"
+  select_item
+  scroll_down
+def_key "K"
+  select_item
+  scroll_up
