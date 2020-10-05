@@ -2,6 +2,7 @@ adwaita-qt
 all-repository-fonts
 ant-dracula-gtk-theme
 ant-dracula-kvantum-theme-git
+autojump
 betterlockscreen
 bitwarden
 flat-remix
