@@ -4,7 +4,6 @@
 [profiles]
   [[default]]
     background_darkness = 0.7
-    background_type = transparent
     cursor_color = "#aaaaaa"
     font = Source Code Pro Medium 10
     foreground_color = "#ffffff"
