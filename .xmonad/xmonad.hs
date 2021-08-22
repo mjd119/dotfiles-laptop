@@ -14,14 +14,10 @@ import XMonad.Hooks.ManageDocks -- Import so xmobar is not behind windows
 import XMonad.Util.SpawnOnce -- Import for spawnOnce command (mjd119)
 import XMonad.Util.Run -- Import for spawnPipe (mjd119)
 import XMonad.Hooks.DynamicLog -- Import to display statusbar information for xmobar
---import XMonad.Config.Desktop
 import XMonad.Actions.SpawnOn -- Import to spawn programs on workspaces (post-compile or on startup)
 import XMonad.Util.EZConfig -- Import to create keyboard shortcuts with emacs-like keybinding syntax
 import XMonad.Layout.SubLayouts -- Import needed for creating sublayouts
 import XMonad.Layout.Simplest -- Import to be used with tabbed sublayout
--- import XMonad.Layout.Groups
--- import XMonad.Layout.Gaps -- Don't need at the moment
--- import XMonad.Layout.Fullscreen -- Import for proper full screen support
 import XMonad.Layout.Tabbed -- Import for tabbed layout (mjd119)
 import XMonad.Layout.Spacing -- Import for gaps around windows
 import XMonad.Layout.Grid -- Import for grid layout
@@ -378,7 +374,6 @@ myStartupHook = do
   spawnOnce "picom -b --experimental-backends &"
   spawnOnce "flameshot &"
   spawnOnce "$HOME/.config/udiskie/launch.sh &"
-  --spawnOnce "trayer --edge bottom --align center --widthtype request --padding 10 --SetDockType true --SetPartialStrut true --expand true --monitor 1 --transparent true --alpha 0 --tint 0x282c34  --height 22 &" -- Copied from dt gitlab
 -- See https://wiki.haskell.org/Xmonad/Config_archive/John_Goerzen%27s_Configuration for trayer
 -- TODO Find solution to make trayer pitch black to blend in with xmobar
   spawn "trayer --edge top --align right --SetDockType true --SetPartialStrut false --expand false --widthtype request --transparent false --height 24 &"
